@@ -1,10 +1,39 @@
+import { useState } from 'react';
 import bannerImage from '../assets/images/banner.svg';
-import '../assets/styles/Banner.css'; // Importa el archivo CSS para el banner
+import '../assets/styles/Banner.css';
 
 const Banner = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [bannerImage, bannerImage, bannerImage, bannerImage]; 
+
+  const goToImage = (index) => {
+    setCurrentImageIndex(index); 
+  };
+
   return (
     <div className="banner-container">
-      <img src={bannerImage} alt="Banner promocional" className="banner-image" />
+     
+      <div className="banner-slide-container" style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
+        {images.map((image, index) => (
+          <img 
+            key={index}
+            src={image} 
+            alt={`Banner promocional ${index}`} 
+            className="banner-image"
+          />
+        ))}
+      </div>
+
+     
+      <div className="carousel-dots">
+        {images.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${currentImageIndex === index ? 'active' : ''}`}
+            onClick={() => goToImage(index)}
+          ></span>
+        ))}
+      </div>
     </div>
   );
 };
