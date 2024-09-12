@@ -1,0 +1,46 @@
+.trending-section {
+  background-color: #dc1e0f;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.trending-title {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+
+.trending-carousel {
+  display: flex;
+  gap: 11px;
+  padding: 10px;
+  overflow-x: auto; 
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  scroll-snap-type: x mandatory;
+  box-sizing: border-box; /* Asegura que el padding no rompa el diseño */
+}
+
+.trending-carousel::-webkit-scrollbar {
+  display: none; /* Oculta el scrollbar */
+}
+
+.trending-carousel > * {
+  flex: 0 0 auto; /* Asegura que cada tarjeta tenga un ancho fijo sin reducirse */
+  scroll-snap-align: center;
+}
+
+@media (max-width: 768px) {
+  .trending-carousel > * {
+    flex: 0 0 80%; /* En pantallas pequeñas, ajusta las tarjetas para que sean más grandes */
+  }
+}

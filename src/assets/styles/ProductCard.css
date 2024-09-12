@@ -1,0 +1,58 @@
+.product-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 160px;
+  flex: 0 0 auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+}
+
+.product-price {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14.06px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.product-button {
+  background-color: white;
+  color: #dc1e0f;
+  border: solid 1px #dc1e0f;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Encode Sans";
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 12.5px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.product-button:hover {
+  background-color: #dc1e0f;
+  color: black;
+}

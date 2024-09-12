@@ -11,14 +11,13 @@ body {
   height: 100%;
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
-  height: 100%; /* Asegura que el body ocupe el 100% de la pantalla */
   color: #333;
 }
 
 .main-content {
-  padding-top: 0px; /* Ajusta este valor para coincidir con la altura de tu Header */
+  padding-top: 10px;
 }
 
 #root {
-  height: 100%; /* Asegura que el root ocupe todo el alto también */
+  height: 100%;
 }
