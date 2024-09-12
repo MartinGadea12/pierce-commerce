@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Banner from './components/Banner';
+
 import './App.css';
 
 function App() {
@@ -7,8 +8,8 @@ function App() {
     <>
       <Header />
       <div className="main-content">
-       <Banner /> 
-    
+        <Banner />
+      
         {/* Otros componentes como ProductList, Footer, etc. */}
       </div>
     </>

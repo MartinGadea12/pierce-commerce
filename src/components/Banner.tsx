@@ -6,7 +6,7 @@ const Banner = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [bannerImage, bannerImage, bannerImage, bannerImage]; 
 
-  const goToImage = (index) => {
+  const goToImage = (index: number) => {
     setCurrentImageIndex(index); 
   };
 
