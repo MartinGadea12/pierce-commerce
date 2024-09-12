@@ -3,13 +3,14 @@ import Banner from './components/Banner';
 import './App.css';
 
 function App() {
-  
   return (
     <>
       <Header />
-       <Banner />
-      {/*<ProductList title="Tendencias" products={trendingProducts} />
-      <Footer /> */}
+      <div className="main-content">
+       <Banner /> 
+    
+        {/* Otros componentes como ProductList, Footer, etc. */}
+      </div>
     </>
   );
 }

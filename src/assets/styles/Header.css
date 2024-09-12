@@ -2,11 +2,11 @@
   width: 100%;
   background-color: white;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 10px 16px;
+  padding: 10px 16px 5px 16px;
 }
 
 .header-top {
