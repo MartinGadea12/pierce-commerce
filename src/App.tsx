@@ -1,18 +1,16 @@
-import Header from './components/Header';
-import Banner from './components/Banner';
+import React from 'react';
+import './App.css'; 
+import Header from './components/Header'; 
+import Banner from './components/Banner'; 
 import Trending from './components/Trending'; 
-import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
+    <div className="app-container">
       <Header />
-      <div className="main-content">
-        <Banner />
-        <Trending />
-        {/* Otros componentes como ProductList, Footer, etc. */}
-      </div>
-    </>
+      <Banner />  
+      <Trending /> 
+    </div>
   );
 }
 

@@ -1,11 +1,14 @@
 .trending-section {
   background-color: #dc1e0f;
-  width: 100vw;
+  width: 100%;
+  height: 380px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
+  padding: 0px 16px;
+  overflow: hidden;
 }
 
 .trending-title {
@@ -18,29 +21,151 @@
   text-align: left;
   margin-bottom: 16px;
   margin-top: 20px;
+  padding-left: 10px;
+  width: 100%;
 }
 
-.trending-carousel {
+.card-container {
+  position: relative;
   display: flex;
-  gap: 11px;
-  padding: 10px;
-  overflow-x: auto; 
-  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  overflow: hidden;
+  max-width: 1290px;
+}
+
+.trending-products {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   scroll-snap-type: x mandatory;
-  box-sizing: border-box; /* Asegura que el padding no rompa el diseño */
 }
 
-.trending-carousel::-webkit-scrollbar {
-  display: none; /* Oculta el scrollbar */
+.mobile-carousel-dots {
+  position: absolute;
+  bottom: 25px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 
-.trending-carousel > * {
-  flex: 0 0 auto; /* Asegura que cada tarjeta tenga un ancho fijo sin reducirse */
-  scroll-snap-align: center;
+.mobile-dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-@media (max-width: 768px) {
-  .trending-carousel > * {
-    flex: 0 0 80%; /* En pantallas pequeñas, ajusta las tarjetas para que sean más grandes */
+.mobile-dot:hover {
+  transform: scale(1.3);
+}
+
+.mobile-dot.active {
+  background-color: white;
+  transform: scale(1.4);
+}
+
+
+@media (min-width: 768px) {
+  .trending-section {
+    background-color: #dc1e0f;
+    width: 100%;
+    height:  566px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+
+.trending-title {
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 32px;
+    text-align: left;
+    margin-bottom: 16px;
+    margin-top: 20px;
+    margin-left: 0;
+    padding-left: 50px;
+    width: 100%;
+  }
+  
+  .carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    overflow: hidden;
+    max-width: 1290px;
+  }
+  
+  .trending-products {
+    display: flex;
+    gap: 8px; 
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .trending-products::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-button.left {
+    left: 10px;
+  }
+  
+  .carousel-button.right {
+    right: 10px;
+  }
+  
+  .arrow-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .rotate {
+    transform: rotate(180deg);
   }
 }
