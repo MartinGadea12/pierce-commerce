@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import "../assets/styles/Trending.css";
 import "../assets/styles/ProductCard.css";
-import arrowIcon from "../assets/icons/Path.svg"; // Importa el ícono
+import arrowIcon from "../assets/icons/Path.svg"; 
 
 import productImg from "../assets/images/product.jpg";
 
