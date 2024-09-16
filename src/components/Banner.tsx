@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import bannerImage from '../assets/images/banner.svg';
+import bannerImage from '../../public/images/banner.svg';
 import '../assets/styles/Banner.css';
 
 const Banner = () => {

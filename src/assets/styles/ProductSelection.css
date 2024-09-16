@@ -1,0 +1,152 @@
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ececec;
+  border-radius: 8px;
+  width: 100%;
+  height: 261px;
+  margin-top: 89px;
+  text-align: center;
+}
+
+.product-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  margin: 40px 0 49px 0;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.img-wallet {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.title-contain {
+  color: #000000;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 263px;
+  height: auto;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.title-selection {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22px;
+  text-align: center;
+}
+
+.parraf-selection {
+  color: #3c3c3b;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.carousel-selection {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.dot-selection {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.dot:hover {
+  transform: scale(1.3);
+}
+
+.dot.active {
+  background-color: black;
+  transform: scale(1.4);
+}
+
+@media (min-width: 768px) {
+  .product-selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    height: auto;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .product-item {
+    flex: 1;
+    text-align: center;
+    max-width: 300px;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  .img-walletweb {
+    width: 43.06px;
+    height: 57.08px;
+  }
+
+  .img-suitCase {
+    width: 58.13px;
+    height: 54px;
+  }
+
+  .img-car {
+    width: 71.05px;
+    height: 55px;
+  }
+
+  .title-contain {
+    width: auto;
+    margin-top: 20px;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .carousel-selection {
+    display: none;
+  }
+
+  .parraf-selection {
+    color: #3c3c3b;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+

@@ -1,0 +1,228 @@
+/* Estilos generales (se aplican tanto a móvil como escritorio) */
+.footer-container {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 37.5px;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.footer-links li {
+  margin: 10px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.footer-sucursal {
+  margin-top: 40px;
+}
+
+.sucursal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.sucursal-header-movil{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.sucursal-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.sucursal {
+  margin: 0;
+  line-height: 1;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.mateusports {
+  width: 290px;
+  height: 17.81px;
+  font-family: "Encode Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-top: 22px;
+}
+
+.pierce-logo {
+  height: 41.05px;
+}
+
+.vtex-logo {
+  width: 49px;
+  height: 21.75px;
+}
+
+/* Estilos para la parte inferior */
+.footer-bottom-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-copyright {
+  font-family: "Encode Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.footer-data-fiscal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer-data-fiscal img {
+  width: 50px;
+  height: auto;
+}
+
+/* Estilos para móvil (centrados) */
+@media (max-width: 767px) {
+  .footer-container {
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-sucursal {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+
+  .footer-bottom-right {
+    flex-direction: column;
+  }
+
+  .mateusports {
+    text-align: center;
+  }
+
+  .footer-data-fiscal {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* Estilos para escritorio (alineados a la izquierda) */
+@media (min-width: 768px) {  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-container {
+    text-align: left;
+  }
+
+  .footer-left {
+    text-align: left;
+  }
+
+  .footer-links {
+    text-align: left;
+  }
+
+  .footer-sucursal {
+    text-align: left;
+  }
+
+  .footer-center{
+    margin-top: 126px;
+  }
+
+  .footer-bottom {
+    justify-content: left;
+    text-align: left;
+  }
+
+  .footer-icons {
+    margin-top: 80px;
+    justify-content: left;
+  }
+
+  .footer-bottom-right {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mateusports {
+    text-align: left;
+  }
+
+  .footer-data-fiscal {
+    justify-content: flex-end;
+  }
+}

@@ -3,11 +3,11 @@
   border-radius: 15px;
   text-align: center;
   width: 160px;
-  height: 233px;
   transition: transform 0.3s ease;
   flex: 0 0 calc((100% / 2) - 4px);
   padding: 10px;
   overflow: hidden;
+  box-shadow: 0px 2px 6px 0px #CCCACA;;
 }
 .product-card:hover {
   transform: scale(1.01);
@@ -44,16 +44,15 @@
   border: solid 1px #dc1e0f;
   border-radius: 20px;
   cursor: pointer;
-  font-weight: 800;
   line-height: 12.5px;
   text-align: center;
-  margin-top: 10px;
   font-family: "Encode Sans", sans-serif;
   font-size: 10px;
   font-weight: 500;
   line-height: 12.5px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 @media (min-width: 768px) {
@@ -63,7 +62,7 @@
     padding: 16px;
     text-align: center;
     width: 250px;
-    height: 402px;
+    height: 380px;
     flex: 0 0 calc((100% / 5) - 10px);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;

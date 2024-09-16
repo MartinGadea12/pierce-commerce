@@ -2,30 +2,27 @@
   width: 100%;
   background-color: white;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  position: relative;
-  top: 0;
-  left: 0;
+  position: relative; 
   z-index: 1000;
-  padding: 10px 16px;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
 }
 
 .menu-hamburguesa {
+  justify-content: center;
   background-color: transparent;
   border: none;
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
 }
 
 .menu-hamburguesa img {
-  width: 24px;
-  height: 24px;
+  width: 17.88px;
+  height: 16px;
 }
 
 .tittle {
@@ -34,10 +31,7 @@
   font-weight: 800;
   font-style: italic;
   color: #0f1e7b;
-  text-align: center;
-  flex-shrink: 0;
-  min-width: 200px;
-  margin-right: auto;
+  padding: 6px;
 }
 
 .icons {

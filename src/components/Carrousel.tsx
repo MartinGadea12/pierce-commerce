@@ -1,71 +1,23 @@
 import React, { useRef, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
-import "../assets/styles/Trending.css";
+import "../assets/styles/Carrousel.css";
 import "../assets/styles/ProductCard.css";
-import arrowIcon from "../assets/icons/Path.svg"; 
+import arrowIcon from "../assets/icons/Path.svg";
 
-import productImg from "../assets/images/product.jpg";
+interface CarrouselProps {
+  products: {
+    id: number;
+    brand: string;
+    details: string;
+    price: string;
+    img: string;
+  }[];
+  title: string;
+  buttonText?: string;
+  extraClass?: string;  
+}
 
-const products = [
-  {
-    id: 1,
-    brand: 'Samsung',
-    details: 'Smart Tv 75" UHD',
-    price: "$1,100.999",
-    img: productImg,
-  },
-  {
-    id: 2,
-    brand: 'Samsung',
-    details: 'Smart Tv 75" UHD',
-    price: "$1,100.999",
-    img: productImg,
-  },
-  {
-    id: 3,
-    brand: 'Samsung',
-    details: 'Smart Tv 75" UHD',
-    price: "$1,100.999",
-    img: productImg,
-  },
-  {
-    id: 4,
-    brand: 'Samsung',
-    details: 'Smart Tv 75" UHD',
-    price: "$1,100.999",
-    img: productImg,
-  },
-  {
-    id: 5,
-    brand: 'Samsung',
-    details: 'Smart Tv 75" UHD',
-    price: "$1,100.999",
-    img: productImg,
-  },
-  {
-    id: 6,
-    brand: 'Samsung',
-    details: 'Smart Tv 75" UHD',
-    price: "$1,100.999",
-    img: productImg,
-  },
-  {
-    id: 7,
-    brand: 'Samsung',
-    details: 'Smart Tv 75" UHD',
-    price: "$1,100.999",
-    img: productImg,
-  },
-  {
-    id: 8,
-    brand: 'Samsung',
-    details: 'Smart Tv 75" UHD',
-    price: "$1,100.999",
-    img: productImg,
-  },
-];
-
-const Trending: React.FC = () => {
+const Carrousel: React.FC<CarrouselProps> = ({ products, title, buttonText = "Comprar", extraClass = "" }) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isDesktop, setIsDesktop] = useState<boolean>(window.innerWidth >= 768);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -99,24 +51,22 @@ const Trending: React.FC = () => {
     }
   };
 
-  // Función para manejar la navegación de los dots en móvil
   const goToImage = (index: number) => {
-    setCurrentImageIndex(index);
+    setCurrentImageIndex(index * 2);
     if (carouselRef.current) {
-      const offset = carouselRef.current.offsetWidth;
+      const cardWidth = 160 * 2;
       carouselRef.current.scrollTo({
-        left: offset * index,
+        left: cardWidth * index,
         behavior: "smooth",
       });
     }
   };
 
   return (
-    <section className="trending-section">
-      <h2 className="trending-title">TENDENCIAS</h2>
+    <section className={`trending-section ${extraClass}`}>
+      <h2 className="trending-title">{title}</h2>
 
       <div className="card-container">
-        {/* Botones de navegación solo en escritorio */}
         {isDesktop && (
           <>
             <button className="carousel-button left" onClick={scrollRight}>
@@ -128,8 +78,7 @@ const Trending: React.FC = () => {
           </>
         )}
 
-        {/* Productos (carrusel) */}
-        <div className="trending-products" ref={carouselRef} style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
+        <div className="trending-products" ref={carouselRef}>
           {products.map((product) => (
             <ProductCard
               key={product.id}
@@ -137,19 +86,18 @@ const Trending: React.FC = () => {
               brand={product.brand}
               details={product.details}
               price={product.price}
-              buttonText="Comprar"
+              buttonText={buttonText}
             />
           ))}
         </div>
       </div>
 
-      {/* Nuevos dots de navegación solo en móvil, posicionados debajo de las cards */}
       {!isDesktop && (
         <div className="mobile-carousel-dots">
-          {products.map((_, index) => (
+          {Array.from({ length: Math.ceil(products.length / 2) }).map((_, index) => (
             <span
               key={index}
-              className={`mobile-dot ${currentImageIndex === index ? 'active' : ''}`}
+              className={`mobile-dot ${currentImageIndex / 2 === index ? "active" : ""}`}
               onClick={() => goToImage(index)}
             ></span>
           ))}
@@ -159,4 +107,4 @@ const Trending: React.FC = () => {
   );
 };
 
-export default Trending;
+export default Carrousel;

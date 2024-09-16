@@ -1,17 +1,15 @@
-import React from 'react';
-import './App.css'; 
-import Header from './components/Header'; 
-import Banner from './components/Banner'; 
-import Trending from './components/Trending'; 
+import React from "react";
+import "./App.css";
+
+
+import Home from "../src/screen/Home"
 
 const App: React.FC = () => {
   return (
     <div className="app-container">
-      <Header />
-      <Banner />  
-      <Trending /> 
+     <Home />
     </div>
   );
-}
+};
 
 export default App;

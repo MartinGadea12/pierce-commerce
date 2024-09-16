@@ -1,7 +1,7 @@
 .banner-container {
   position: relative;
   width: 100%;
-  min-height: 140px; /* Altura mínima para pantallas móviles */
+  min-height: 140px; 
   background-color: #fff;
   overflow: hidden;
 }
