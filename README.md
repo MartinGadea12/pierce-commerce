@@ -1,21 +1,78 @@
-# React + TypeScript + Vite
+Página de Inicio de Pierce E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una página de inicio para un sitio web de e-commerce, construida usando React, TypeScript y CSS para los estilos. Ofrece un diseño limpio y responsivo, enfocado en proporcionar una excelente experiencia de usuario para los clientes que navegan los productos.
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+Tabla de Contenidos
+Características
+Tecnologías Usadas
+Primeros Pasos
+Instalación
+Uso
+Estructura del Proyecto
 
-## Deploy Your Own
+Características
+Diseño Responsivo: Optimizado tanto para vistas móviles como de escritorio.
+Vitrina de Productos: Muestra una cuadrícula con productos destacados.
+Navegación Simple: Navegación intuitiva por el sitio.
+Estilos con CSS Personalizados: Estilos diseñados específicamente para e-commerce.
+TypeScript: Asegura seguridad en el código y claridad.
+Tecnologías Usadas
+React: Librería de JavaScript para construir interfaces de usuario.
+TypeScript: Un superconjunto de JavaScript que agrega tipado estático.
+CSS: Para los estilos de los componentes y el diseño.
 
-Deploy your own Vite project with Vercel.
+Primeros Pasos
+Para obtener una copia local del proyecto y ejecutarla, sigue los pasos a continuación.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/vite-react&template=vite-react)
+Requisitos
+Asegúrate de tener Node.js y npm instalados en tu sistema.
 
-_Live Example: https://vite-react-example.vercel.app_
+Descargar Node.js (incluye npm)
+Instalación
+Clona el repositorio:
 
-### Deploying From Your Terminal
 
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
+git clone https://github.com/tu-usuario/ecommerce-home.git
+Navega a la carpeta del proyecto:
 
-```shell
-$ vercel
-```
+
+cd ecommerce-home
+Instala las dependencias:
+
+npm install
+Uso
+Ejecuta el servidor de desarrollo:
+
+npm start
+Abre tu navegador y ve a http://localhost:3000 para ver la página de inicio.
+
+Construir para Producción
+Para crear una versión de producción, ejecuta:
+
+bash
+Copiar código
+npm run build
+Esto optimizará la aplicación y generará archivos estáticos en la carpeta build/.
+
+Estructura del Proyecto
+css
+Copiar código
+.
+├── public/
+│   ├── index.html
+│   └── images/
+├── src/
+│   ├── components/
+│   │   └── ProductList.tsx
+│   ├── screen/
+│   │   └── Home.tsx
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── styles/
+│       └── main.css
+├── package.json
+└── README.md
+
+components/: Contiene los componentes reutilizables de React, como la lista de productos.
+screen/: Contiene los componentes a nivel de página como Home.tsx.
+styles/: Contiene archivos CSS globales para los estilos de la aplicación.

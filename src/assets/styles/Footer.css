@@ -1,4 +1,4 @@
-/* Estilos generales (se aplican tanto a móvil como escritorio) */
+
 .footer-container {
   background-color: black;
   color: white;
@@ -136,7 +136,7 @@
   height: auto;
 }
 
-/* Estilos para móvil (centrados) */
+
 @media (max-width: 767px) {
   .footer-container {
     text-align: center;
